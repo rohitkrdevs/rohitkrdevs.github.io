@@ -58,6 +58,8 @@
           background: linear-gradient(120deg, var(--bg-soft), var(--bg));
           color: var(--text-main);
           line-height: 1.75;
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
         }
         
         /* TYPOGRAPHY */
@@ -268,6 +270,61 @@
         }
         .col-wrapper {
           padding-top: 20px;
+        }
+        /* ================= MOBILE TYPOGRAPHY SPACING ================= */
+        @media (max-width: 768px) {
+        
+          /* PARAGRAPH TEXT */
+          p {
+            letter-spacing: 0.3px;
+            word-spacing: 1px;
+            line-height: 1.9;
+          }
+        
+          /* HEADINGS */
+          h1 {
+            letter-spacing: 0.5px;
+          }
+        
+          h2 {
+            letter-spacing: 0.4px;
+          }
+        
+          h3 {
+            letter-spacing: 1.2px; /* already uppercase style feel */
+          }
+        
+          h4 {
+            letter-spacing: 0.3px;
+          }
+        
+          /* NAV LINKS */
+          .nav-link {
+            letter-spacing: 2px; /* cleaner spacing for menu */
+          }
+        
+          /* EXPERIENCE LIST */
+          .exp-content li {
+            letter-spacing: 0.2px;
+            word-spacing: 0.8px;
+            line-height: 1.8;
+          }
+        
+          /* TECH TAGS */
+          .tech-stack span {
+            letter-spacing: 0.5px;
+          }
+        
+          /* SKILL TEXT */
+          .skill-card p {
+            letter-spacing: 0.25px;
+            word-spacing: 0.8px;
+          }
+        
+          /* CONTACT */
+          .small {
+            letter-spacing: 0.3px;
+          }
         }
     </style>
 
