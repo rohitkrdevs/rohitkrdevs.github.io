@@ -18,33 +18,42 @@
   --text-muted: #94a3b8;
   --text-fade: #64748b;
   --accent: #5eead4;
-  --card: #0f172a;
   --badge: #112240;
 }
 
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* BODY */
 body {
   font-family: 'Inter', sans-serif;
   background: linear-gradient(120deg, var(--bg-soft), var(--bg));
   color: var(--text-main);
+}
+
+/* CONTAINER */
+.wrapper {
+  max-width: 1200px;
+  margin: auto;
   display: flex;
+  gap: 60px;
+  padding: 60px 20px;
 }
 
 /* SIDEBAR */
 .sidebar {
-  width: 38%;
-  min-height: 100vh;
-  padding: 70px 50px;
-  position: fixed;
+  width: 35%;
+  position: sticky;
+  top: 60px;
+  height: fit-content;
 }
 
 .sidebar h1 {
-  font-size: 42px;
+  font-size: 38px;
   font-weight: 700;
 }
 
@@ -57,30 +66,30 @@ body {
 .sidebar p {
   margin-top: 20px;
   color: var(--text-fade);
-  max-width: 300px;
 }
 
 /* NAV */
 .nav {
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 .nav a {
   display: block;
-  margin: 15px 0;
+  margin: 12px 0;
   text-decoration: none;
   color: var(--text-fade);
   letter-spacing: 1px;
   position: relative;
+  padding-left: 40px;
 }
 
 .nav a::before {
   content: "";
-  width: 30px;
+  width: 25px;
   height: 1px;
   background: var(--text-fade);
   position: absolute;
-  left: -40px;
+  left: 0;
   top: 50%;
 }
 
@@ -90,11 +99,10 @@ body {
 
 /* CONTENT */
 .content {
-  margin-left: 38%;
-  width: 62%;
-  padding: 70px 60px;
+  width: 65%;
 }
 
+/* SECTION */
 .section {
   margin-bottom: 60px;
 }
@@ -104,13 +112,12 @@ body {
   margin-bottom: 15px;
 }
 
-/* EXPERIENCE */
+/* JOB */
 .job {
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 
 .job h4 {
-  font-size: 18px;
   font-weight: 600;
 }
 
@@ -139,61 +146,24 @@ body {
   margin: 5px 5px 0 0;
 }
 
-/* SOCIALS */
-.social {
-  margin-top: 60px;
-}
-
-.social a {
-  margin-right: 15px;
-  color: var(--text-muted);
-  font-size: 18px;
-  text-decoration: none;
-}
-
-.social a:hover {
-  color: var(--accent);
-}
-
 /* MOBILE */
 @media(max-width: 900px) {
-  body {
+  .wrapper {
     flex-direction: column;
   }
-
-  .sidebar {
-    width: 100%;
-    position: relative;
-  }
-
-  .content {
-    margin-left: 0;
+  .sidebar, .content {
     width: 100%;
   }
 }
 </style>
 
-<!-- SEO Schema -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "Person",
- "name": "Rohit Kumar",
- "jobTitle": "Web Developer",
- "address": {
-   "@type": "PostalAddress",
-   "addressLocality": "Ranchi",
-   "addressRegion": "Jharkhand",
-   "addressCountry": "India"
- }
-}
-</script>
-
 </head>
 
 <body>
 
-<!-- LEFT SIDEBAR -->
+<div class="wrapper">
+
+<!-- LEFT -->
 <div class="sidebar">
   <h1>Rohit Kumar</h1>
   <h2>Web Developer</h2>
@@ -207,14 +177,9 @@ body {
     <a href="#experience">EXPERIENCE</a>
     <a href="#skills">SKILLS</a>
   </div>
-
-  <div class="social">
-    <a href="https://github.com/rohitkrdevs">GitHub</a>
-    <a href="https://linkedin.com/in/rohitkrdevs">LinkedIn</a>
-  </div>
 </div>
 
-<!-- RIGHT CONTENT -->
+<!-- RIGHT -->
 <div class="content">
 
 <div id="about" class="section">
@@ -268,6 +233,8 @@ body {
     <span>PHP</span><span>MySQL</span><span>WordPress</span>
     <span>Bootstrap</span><span>Tailwind</span><span>SEO</span>
   </div>
+
+</div>
 
 </div>
 
