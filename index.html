@@ -116,15 +116,6 @@
           border-color: rgba(94, 234, 212, 0.4);
         }
         
-        /* SECTION WRAPPER */
-        .section-card {
-          padding: 28px;
-          border-radius: 14px;
-          background: rgba(2, 6, 23, 0.6);
-          border: 1px solid rgba(148, 163, 184, 0.06);
-          margin-bottom: 50px;
-        }
-        
         /* EXPERIENCE TIMELINE */
         .exp-timeline {
           display: grid;
@@ -212,6 +203,44 @@
             font-size: 30px;
           }
         }
+
+        /* HIDE DEFAULT CURSOR */
+        body {
+          cursor: none;
+        }
+        
+        /* DOT */
+        .cursor-dot {
+          width: 6px;
+          height: 6px;
+          background: #5eead4;
+          position: fixed;
+          border-radius: 50%;
+          pointer-events: none;
+          z-index: 9999;
+        }
+        
+        /* OUTLINE */
+        .cursor-outline {
+          width: 35px;
+          height: 35px;
+          border: 1px solid rgba(94,234,212,0.5);
+          position: fixed;
+          border-radius: 50%;
+          pointer-events: none;
+          z-index: 9998;
+          transition: transform 0.15s ease;
+        }
+        @media (max-width: 768px) {
+          .cursor-dot,
+          .cursor-outline {
+            display: none;
+          }
+        
+          body {
+            cursor: default;
+          }
+        }
     </style>
 
 </head>
@@ -248,19 +277,14 @@
 
                 <div id="about" class="section">
                     <h3>About</h3>
-                    <p>
-                        I’m a Web Developer based in Ranchi, Jharkhand, with over 5 years of experience building and maintaining websites and internal tools using PHP, WordPress, and modern web technologies. I focus on creating reliable, user-friendly interfaces that balance
-                        clean design with practical functionality.
-                        <br> I take pride in developing responsive, performance-focused web solutions and improving existing systems through better structure, usability, and SEO. My work often sits at the intersection of implementation and problem-solving—where
-                        real business requirements meet clean, maintainable code.
-                        <br> In my current role, I’ve worked extensively on internal tools, dashboards, and content-driven platforms, handling everything from UI development to deployment and payment integrations. I collaborate closely with teams to deliver
-                        solutions that are not only functional but also efficient and scalable in real-world environments.
-                        <br> Alongside my professional work, I’m actively transitioning toward modern full-stack development. I’m currently strengthening my JavaScript fundamentals and building projects using React and the MERN stack to expand my capabilities.
-                        Outside of work, I enjoy exploring new technologies, improving my development workflow, and continuously learning to stay aligned with current industry standards.
+                    <p>Web Developer with 5+ years of experience designing, developing, and maintaining scalable websites and internal business tools. Proficient in PHP, HTML, CSS, JavaScript, MySQL, and WordPress, with hands-on experience building responsive user interfaces and optimizing applications for performance, SEO, and usability.<br>
+                        Skilled in end-to-end development, including requirement analysis, UI implementation, database design, hosting setup, and deployment. Experienced in integrating real-world business functionalities such as payment gateways (Razorpay, Stripe), admin dashboards, and workflow automation systems.<br>
+                        Strong focus on writing clean, maintainable code and improving existing systems for better structure, speed, and user experience. Adept at troubleshooting, debugging, and collaborating with cross-functional teams to deliver reliable solutions in production environments.<br>
+                        Currently expanding expertise in modern full-stack development by strengthening JavaScript fundamentals and building applications using React and the MERN stack.
                     </p>
                 </div>
 
-                <div id="experience" class="section-card">
+                <div id="experience">
                     <h3>Professional Experience</h3>
 
 
@@ -341,7 +365,7 @@
 
                 </div>
 
-                <div id="skills" class="section-card">
+                <div id="skills">
                     <h3>Skills & Technologies</h3>
 
                     <div class="row g-4">
@@ -396,7 +420,32 @@
         </div>
 
     </div>
-
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
 </body>
+<script>
+const dot = document.querySelector(".cursor-dot");
+const outline = document.querySelector(".cursor-outline");
+
+window.addEventListener("mousemove", (e) => {
+  const { clientX, clientY } = e;
+
+  dot.style.left = clientX + "px";
+  dot.style.top = clientY + "px";
+
+  outline.style.left = clientX + "px";
+  outline.style.top = clientY + "px";
+});
+
+/* HOVER EFFECT */
+document.querySelectorAll("a, button").forEach(el => {
+  el.addEventListener("mouseenter", () => {
+    outline.style.transform = "scale(1.8)";
+  });
+  el.addEventListener("mouseleave", () => {
+    outline.style.transform = "scale(1)";
+  });
+});
+</script>
 
 </html>
