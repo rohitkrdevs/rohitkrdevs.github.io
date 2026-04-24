@@ -269,7 +269,30 @@
           top: 100px; /* space from top */
           align-self: flex-start; /* FIX for Bootstrap row */
         }
-</style>
+        
+        /* TECH CHIPS */
+        .tech-stack {
+          margin-top: 12px;
+        }
+        
+        .tech-stack span {
+          display: inline-block;
+          background: rgba(94, 234, 212, 0.08);
+          color: var(--accent);
+          border: 1px solid rgba(94, 234, 212, 0.25);
+          padding: 4px 10px;
+          font-size: 11px;
+          border-radius: 999px;
+          margin: 5px 6px 0 0;
+          transition: all 0.25s ease;
+        }
+        
+        .tech-stack span:hover {
+          background: var(--accent);
+          color: #020617;
+          transform: translateY(-1px);
+        }
+    </style>
 
 </head>
 
@@ -305,105 +328,134 @@
 
                 <div id="about" class="section">
                     <h3>About</h3>
-                        <p>
-                        I’m a Web Developer based in Ranchi, Jharkhand, with over 5 years of experience building and maintaining websites and internal tools using PHP, WordPress, and modern web technologies. I focus on creating reliable, user-friendly interfaces that balance clean design with practical functionality.<br>
-                        I take pride in developing responsive, performance-focused web solutions and improving existing systems through better structure, usability, and SEO. My work often sits at the intersection of implementation and problem-solving—where real business requirements meet clean, maintainable code.<br>                        
-                        In my current role, I’ve worked extensively on internal tools, dashboards, and content-driven platforms, handling everything from UI development to deployment and payment integrations. I collaborate closely with teams to deliver solutions that are not only functional but also efficient and scalable in real-world environments.<br>
-                        Alongside my professional work, I’m actively transitioning toward modern full-stack development. I’m currently strengthening my JavaScript fundamentals and building projects using React and the MERN stack to expand my capabilities.
-                        
+                    <p>
+                        I’m a Web Developer based in Ranchi, Jharkhand, with over 5 years of experience building and maintaining websites and internal tools using PHP, WordPress, and modern web technologies. I focus on creating reliable, user-friendly interfaces that balance
+                        clean design with practical functionality.
+                        <br> I take pride in developing responsive, performance-focused web solutions and improving existing systems through better structure, usability, and SEO. My work often sits at the intersection of implementation and problem-solving—where
+                        real business requirements meet clean, maintainable code.
+                        <br> In my current role, I’ve worked extensively on internal tools, dashboards, and content-driven platforms, handling everything from UI development to deployment and payment integrations. I collaborate closely with teams to deliver
+                        solutions that are not only functional but also efficient and scalable in real-world environments.
+                        <br> Alongside my professional work, I’m actively transitioning toward modern full-stack development. I’m currently strengthening my JavaScript fundamentals and building projects using React and the MERN stack to expand my capabilities.
                         Outside of work, I enjoy exploring new technologies, improving my development workflow, and continuously learning to stay aligned with current industry standards.
-                        </p>
+                    </p>
                 </div>
 
-<div id="experience" class="section-card">
-  <h3>Professional Experience</h3>
+                <div id="experience" class="section-card">
+                    <h3>Professional Experience</h3>
 
-  <div class="card-grid">
+                    <div class="card-grid">
 
-    <div class="card-custom exp-card">
-      <h4>Web Developer · Curesta Global Limited</h4>
-      <span>Jul 2021 – Oct 2025</span>
-      <ul>
-        <li>Developed and maintained internal tools using PHP, HTML, CSS, JavaScript, and MySQL.</li>
-        <li>Improved mobile responsiveness and UI consistency across platforms.</li>
-        <li>Implemented SEO improvements and optimized structure.</li>
-        <li>Built dashboards, admin panels, and workflow systems.</li>
-        <li>Integrated Razorpay and Stripe payment gateways.</li>
-      </ul>
-    </div>
+                        <div class="card-custom exp-card">
+                          <h4>Web Developer · Curesta Global Limited</h4>
+                          <span>Jul 2021 – Oct 2025</span>
+                        
+                          <div class="tech-stack">
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>JavaScript</span>
+                            <span>WordPress</span>
+                            <span>Razorpay</span>
+                            <span>Stripe</span>
+                          </div>
+                        
+                          <ul>
+                            <li>Developed and maintained internal tools using PHP, HTML, CSS, JavaScript, and MySQL.</li>
+                            <li>Improved mobile responsiveness and UI consistency across platforms.</li>
+                            <li>Implemented SEO improvements and optimized structure.</li>
+                            <li>Built dashboards, admin panels, and workflow systems.</li>
+                            <li>Integrated Razorpay and Stripe payment gateways.</li>
+                          </ul>
+                        </div>
 
-    <div class="card-custom exp-card">
-      <h4>Web Developer · Vmak Research</h4>
-      <span>Nov 2020 – Jun 2021</span>
-      <ul>
-        <li>Developed websites using PHP, WordPress, HTML, CSS, JS.</li>
-        <li>Customized themes and configured plugins.</li>
-        <li>Managed hosting and deployments.</li>
-      </ul>
-    </div>
+                        <div class="card-custom exp-card">
+                          <h4>Web Developer · Vmak Research</h4>
+                          <span>Nov 2020 – Jun 2021</span>
+                        
+                          <div class="tech-stack">
+                            <span>PHP</span>
+                            <span>WordPress</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                          </div>
+                        
+                          <ul>
+                            <li>Developed websites using PHP, WordPress, HTML, CSS, JS.</li>
+                            <li>Customized themes and configured plugins.</li>
+                            <li>Managed hosting and deployments.</li>
+                          </ul>
+                        </div>
 
-    <div class="card-custom exp-card">
-      <h4>Junior Web Developer · GrubWeb</h4>
-      <span>Jul 2019 – Oct 2020</span>
-      <ul>
-        <li>Built responsive websites for clients.</li>
-        <li>Worked directly with clients on requirements.</li>
-        <li>Performed testing and bug fixing.</li>
-      </ul>
-    </div>
+                        <div class="card-custom exp-card">
+                          <h4>Junior Web Developer · GrubWeb</h4>
+                          <span>Jul 2019 – Oct 2020</span>
+                        
+                          <div class="tech-stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Responsive Design</span>
+                          </div>
+                        
+                          <ul>
+                            <li>Built responsive websites for clients.</li>
+                            <li>Worked directly with clients on requirements.</li>
+                            <li>Performed testing and bug fixing.</li>
+                          </ul>
+                        </div>
 
-  </div>
-</div>
+                    </div>
+                </div>
 
-<div id="skills" class="section-card">
-  <h3>Skills & Technologies</h3>
+                <div id="skills" class="section-card">
+                    <h3>Skills & Technologies</h3>
 
-  <div class="row g-4">
+                    <div class="row g-4">
 
-    <div class="col-md-6">
-      <div class="card-custom skill-card">
-        <h5>Core Technologies</h5>
-        <p>HTML, CSS, JavaScript (Basic), PHP, MySQL</p>
-      </div>
-    </div>
+                        <div class="col-md-6">
+                            <div class="card-custom skill-card">
+                                <h5>Core Technologies</h5>
+                                <p>HTML, CSS, JavaScript (Basic), PHP, MySQL</p>
+                            </div>
+                        </div>
 
-    <div class="col-md-6">
-      <div class="card-custom skill-card">
-        <h5>UI & Styling</h5>
-        <p>Bootstrap, Tailwind CSS, Responsive Design</p>
-      </div>
-    </div>
+                        <div class="col-md-6">
+                            <div class="card-custom skill-card">
+                                <h5>UI & Styling</h5>
+                                <p>Bootstrap, Tailwind CSS, Responsive Design</p>
+                            </div>
+                        </div>
 
-    <div class="col-md-6">
-      <div class="card-custom skill-card">
-        <h5>WordPress</h5>
-        <p>Setup, theme customization, plugins, page builders</p>
-      </div>
-    </div>
+                        <div class="col-md-6">
+                            <div class="card-custom skill-card">
+                                <h5>WordPress</h5>
+                                <p>Setup, theme customization, plugins, page builders</p>
+                            </div>
+                        </div>
 
-    <div class="col-md-6">
-      <div class="card-custom skill-card">
-        <h5>Hosting</h5>
-        <p>cPanel, domains, database setup</p>
-      </div>
-    </div>
+                        <div class="col-md-6">
+                            <div class="card-custom skill-card">
+                                <h5>Hosting</h5>
+                                <p>cPanel, domains, database setup</p>
+                            </div>
+                        </div>
 
-    <div class="col-md-6">
-      <div class="card-custom skill-card">
-        <h5>Features</h5>
-        <p>Dashboards, admin panels, Razorpay & Stripe integration</p>
-      </div>
-    </div>
+                        <div class="col-md-6">
+                            <div class="card-custom skill-card">
+                                <h5>Features</h5>
+                                <p>Dashboards, admin panels, Razorpay & Stripe integration</p>
+                            </div>
+                        </div>
 
-    <div class="col-md-6">
-      <div class="card-custom skill-card">
-        <h5>Other</h5>
-        <p>SEO basics, Ads, Debugging, Git/GitHub</p>
-      </div>
-    </div>
+                        <div class="col-md-6">
+                            <div class="card-custom skill-card">
+                                <h5>Other</h5>
+                                <p>SEO basics, Ads, Debugging, Git/GitHub</p>
+                            </div>
+                        </div>
 
-  </div>
-</div>
+                    </div>
+                </div>
 
             </div>
 
