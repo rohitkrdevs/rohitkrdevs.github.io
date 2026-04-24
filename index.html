@@ -37,18 +37,41 @@
           font-family: 'Inter', sans-serif;
           background: linear-gradient(120deg, var(--bg-soft), var(--bg));
           color: var(--text-main);
-          line-height: 1.7;
-          letter-spacing: 0.3px;
+          line-height: 1.75;
         }
         
         /* TYPOGRAPHY */
-        h1, h2, h3, h4, h5 {
-          letter-spacing: 0.5px;
+        h1 {
+          font-size: 38px;
+          font-weight: 700;
+        }
+        
+        h2 {
+          font-size: 18px;
+          font-weight: 500;
+          color: var(--text-muted);
+        }
+        
+        h3 {
+          font-size: 16px;
+          letter-spacing: 1px;
+          color: var(--accent);
+          margin-bottom: 18px;
+        }
+        
+        h4 {
+          font-size: 17px;
+          font-weight: 600;
         }
         
         p {
-          margin-bottom: 14px;
+          font-size: 15px;
           color: var(--text-muted);
+        }
+        
+        /* LAYOUT FIX */
+        .row {
+          align-items: flex-start;
         }
         
         /* SIDEBAR */
@@ -57,313 +80,138 @@
           top: 100px;
         }
         
-        .sidebar h1 {
-          font-size: 40px;
-          font-weight: 700;
-          margin-bottom: 5px;
-        }
-        
-        .sidebar h2 {
-          color: var(--text-muted);
-          font-size: 18px;
-        }
-        
         .sidebar p {
-          margin-top: 20px;
-          font-size: 15px;
+          margin-top: 16px;
         }
         
         /* NAV */
         .nav-link {
           color: var(--text-fade);
-          padding: 6px 0;
-          letter-spacing: 1.5px;
           font-size: 13px;
-          position: relative;
-          transition: all 0.3s ease;
-        }
-        
-        /* line animation */
-        .nav-link::before {
-          content: "";
-          position: absolute;
-          left: -30px;
-          top: 50%;
-          width: 0;
-          height: 1px;
-          background: var(--accent);
-          transition: 0.3s;
+          letter-spacing: 1.5px;
+          padding: 6px 0;
+          transition: 0.25s;
         }
         
         .nav-link:hover {
           color: var(--text-main);
-          transform: translateX(5px);
         }
         
-        .nav-link:hover::before {
-          width: 20px;
-        }
-        
-        /* SECTIONS */
+        /* SECTION */
         .section {
-          margin-bottom: 70px;
+          margin-bottom: 60px;
         }
         
-        .section h3 {
-          color: var(--accent);
-          margin-bottom: 18px;
-          font-size: 18px;
-          letter-spacing: 1px;
-        }
-        
-        /* EXPERIENCE */
-        .job {
-          margin-bottom: 35px;
-          padding: 18px;
-          border-radius: 10px;
-          transition: 0.3s ease;
-        }
-        
-        .job:hover {
-          background: rgba(94, 234, 212, 0.05);
-          transform: translateY(-2px);
-        }
-        
-        .job h4 {
-          font-weight: 600;
-          margin-bottom: 5px;
-        }
-        
-        .job span {
-          font-size: 13px;
-          color: var(--text-fade);
-        }
-        
-        .job ul {
-          margin-top: 10px;
-          padding-left: 18px;
-        }
-        
-        .job li {
-          margin-bottom: 6px;
-          color: var(--text-muted);
-          font-size: 14px;
-        }
-        
-        /* SKILLS TEXT */
-        .section p strong {
-          color: var(--text-main);
-        }
-        
-        /* TAGS */
-        .tags {
-          margin-top: 10px;
-        }
-        
-        .tags span {
-          display: inline-block;
-          background: var(--badge);
-          color: var(--accent);
-          padding: 6px 12px;
-          border-radius: 999px;
-          font-size: 12px;
-          margin: 6px 6px 0 0;
-          transition: 0.3s ease;
-        }
-        
-        .tags span:hover {
-          background: var(--accent);
-          color: #020617;
-        }
-        
-        /* CONTACT */
-        .small {
-          color: var(--text-fade);
-          font-size: 14px;
-        }
-        
-        /* SCROLL SMOOTH */
-        html {
-          scroll-behavior: smooth;
-        }
-        
-        /* MOBILE */
-        @media(max-width: 992px) {
-          .sidebar {
-            position: relative;
-            top: 0;
-            margin-bottom: 40px;
-          }
-        }
-
         /* CARD BASE */
         .card-custom {
           background: rgba(15, 23, 42, 0.6);
           border: 1px solid rgba(148, 163, 184, 0.08);
-          border-radius: 14px;
-          padding: 22px;
-          transition: all 0.3s ease;
+          border-radius: 12px;
+          padding: 20px;
           backdrop-filter: blur(6px);
+          transition: border 0.25s ease;
         }
         
         .card-custom:hover {
-          transform: translateY(-4px);
           border-color: rgba(94, 234, 212, 0.4);
-          box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
         
         /* SECTION WRAPPER */
         .section-card {
-          padding: 30px;
-          border-radius: 16px;
+          padding: 28px;
+          border-radius: 14px;
           background: rgba(2, 6, 23, 0.6);
           border: 1px solid rgba(148, 163, 184, 0.06);
-          margin-bottom: 60px;
+          margin-bottom: 50px;
         }
         
-        /* EXPERIENCE CARD */
-        .exp-card h4 {
-          font-weight: 600;
+        /* EXPERIENCE TIMELINE */
+        .exp-timeline {
+          display: grid;
+          grid-template-columns: 130px 1fr;
+          gap: 18px;
+          padding: 20px;
+          border-radius: 12px;
+          border: 1px solid rgba(148,163,184,0.08);
+          background: rgba(15,23,42,0.6);
+          margin-bottom: 20px;
+          transition: border 0.25s;
         }
         
-        .exp-card span {
-          font-size: 13px;
+        .exp-timeline:hover {
+          border-color: rgba(94,234,212,0.4);
+        }
+        
+        .exp-date {
+          font-size: 12px;
           color: var(--text-fade);
         }
         
-        .exp-card ul {
-          margin-top: 12px;
-          padding-left: 18px;
-        }
-        
-        .exp-card li {
-          margin-bottom: 6px;
-          font-size: 14px;
-          color: var(--text-muted);
-        }
-        
-        /* SKILL CARDS */
-        .skill-card {
-          text-align: left;
-          height: 100%;
-        }
-        
-        .skill-card h5 {
-          font-size: 14px;
-          margin-bottom: 10px;
+        .exp-content h4 span {
           color: var(--accent);
         }
         
-        .skill-card p {
+        .exp-content ul {
+          margin-top: 10px;
+          padding-left: 18px;
+        }
+        
+        .exp-content li {
           font-size: 14px;
-          color: var(--text-muted);
+          margin-bottom: 5px;
         }
         
-        /* GRID GAP */
-        .card-grid {
-          display: grid;
-          gap: 20px;
-        }
-        .sidebar {
-          position: sticky;
-          top: 100px; /* space from top */
-          align-self: flex-start; /* FIX for Bootstrap row */
-        }
-        
-        /* TECH CHIPS */
+        /* TECH STACK */
         .tech-stack {
           margin-top: 12px;
         }
         
         .tech-stack span {
           display: inline-block;
-          background: rgba(94, 234, 212, 0.08);
-          color: var(--accent);
-          border: 1px solid rgba(94, 234, 212, 0.25);
-          padding: 4px 10px;
+          padding: 5px 10px;
           font-size: 11px;
           border-radius: 999px;
-          margin: 5px 6px 0 0;
-          transition: all 0.25s ease;
+          margin: 5px 5px 0 0;
+          border: 1px solid rgba(94,234,212,0.25);
+          color: var(--accent);
         }
         
-        .tech-stack span:hover {
-          background: var(--accent);
-          color: #020617;
-          transform: translateY(-1px);
+        /* SKILLS */
+        .skill-card h5 {
+          font-size: 14px;
+          color: var(--accent);
+          margin-bottom: 8px;
         }
-
-        /* TIMELINE EXPERIENCE CARD */
-.exp-timeline {
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 20px;
-  padding: 24px;
-  border-radius: 14px;
-  background: linear-gradient(120deg, rgba(15,23,42,0.6), rgba(2,6,23,0.8));
-  border: 1px solid rgba(148,163,184,0.08);
-  transition: all 0.3s ease;
-}
-
-.exp-timeline:hover {
-  transform: translateY(-4px);
-  border-color: rgba(94,234,212,0.4);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
-
-/* LEFT DATE */
-.exp-date {
-  font-size: 13px;
-  color: var(--text-fade);
-  letter-spacing: 1px;
-  font-weight: 500;
-}
-
-/* RIGHT CONTENT */
-.exp-content h4 {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--text-main);
-}
-
-.exp-content h4 span {
-  color: var(--accent);
-}
-
-.exp-content p {
-  margin-top: 10px;
-  font-size: 14px;
-  color: var(--text-muted);
-}
-
-/* TECH CHIPS */
-.tech-stack {
-  margin-top: 14px;
-}
-
-.tech-stack span {
-  display: inline-block;
-  background: rgba(94,234,212,0.08);
-  color: var(--accent);
-  border: 1px solid rgba(94,234,212,0.25);
-  padding: 6px 12px;
-  font-size: 12px;
-  border-radius: 999px;
-  margin: 6px 6px 0 0;
-  transition: 0.25s ease;
-}
-
-.tech-stack span:hover {
-  background: var(--accent);
-  color: #020617;
-}
-
-/* MOBILE */
-@media(max-width: 768px) {
-  .exp-timeline {
-    grid-template-columns: 1fr;
-  }
-}
+        
+        /* CONTACT */
+        .small {
+          font-size: 13px;
+          color: var(--text-fade);
+        }
+        
+        /* SMOOTH SCROLL */
+        html {
+          scroll-behavior: smooth;
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+          .sidebar {
+            position: relative;
+            top: 0;
+            margin-bottom: 30px;
+          }
+        }
+        
+        @media (max-width: 768px) {
+          .exp-timeline {
+            grid-template-columns: 1fr;
+          }
+        
+          h1 {
+            font-size: 30px;
+          }
+        }
     </style>
 
 </head>
@@ -375,7 +223,7 @@
         <div class="row">
 
             <!-- LEFT SIDEBAR -->
-            <div class="col-lg-4 mb-5 sidebar">
+            <div class="col-lg-4 sidebar">
                 <h1>Rohit Kumar</h1>
                 <h2>Web Developer</h2>
 
@@ -396,7 +244,7 @@
             </div>
 
             <!-- RIGHT CONTENT -->
-            <div class="col-lg-7 offset-1">
+            <div class="col-lg-8">
 
                 <div id="about" class="section">
                     <h3>About</h3>
