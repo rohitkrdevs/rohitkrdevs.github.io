@@ -6,65 +6,93 @@
 
 <title>Rohit Kumar - Web Developer in Ranchi</title>
 
-<meta name="description" content="Rohit Kumar is a Web Developer in Ranchi with 5+ years experience in PHP, WordPress, MySQL and MERN stack. View experience, skills and projects.">
+<meta name="description" content="Rohit Kumar is a Web Developer in Ranchi with 5+ years experience in PHP, WordPress, MySQL and MERN stack.">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #020617;
+  --bg-soft: #0a192f;
+  --text-main: #e2e8f0;
+  --text-muted: #94a3b8;
+  --text-fade: #64748b;
+  --accent: #5eead4;
+  --card: #0f172a;
+  --badge: #112240;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(120deg, #0a192f, #020617);
-  color: #cbd5f5;
+  background: linear-gradient(120deg, var(--bg-soft), var(--bg));
+  color: var(--text-main);
   display: flex;
 }
 
-/* LEFT SIDEBAR */
+/* SIDEBAR */
 .sidebar {
-  width: 35%;
+  width: 38%;
   min-height: 100vh;
-  padding: 60px 40px;
+  padding: 70px 50px;
   position: fixed;
 }
 
 .sidebar h1 {
-  font-size: 36px;
-  color: #e2e8f0;
+  font-size: 42px;
+  font-weight: 700;
 }
 
 .sidebar h2 {
   margin-top: 10px;
   font-weight: 400;
-  color: #94a3b8;
+  color: var(--text-muted);
 }
 
 .sidebar p {
   margin-top: 20px;
-  color: #64748b;
+  color: var(--text-fade);
+  max-width: 300px;
 }
 
+/* NAV */
 .nav {
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 .nav a {
   display: block;
   margin: 15px 0;
-  color: #94a3b8;
   text-decoration: none;
+  color: var(--text-fade);
   letter-spacing: 1px;
+  position: relative;
+}
+
+.nav a::before {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: var(--text-fade);
+  position: absolute;
+  left: -40px;
+  top: 50%;
 }
 
 .nav a:hover {
-  color: #38bdf8;
+  color: var(--text-main);
 }
 
-/* RIGHT CONTENT */
+/* CONTENT */
 .content {
-  margin-left: 35%;
-  padding: 60px;
-  width: 65%;
+  margin-left: 38%;
+  width: 62%;
+  padding: 70px 60px;
 }
 
 .section {
@@ -72,31 +100,59 @@ body {
 }
 
 .section h3 {
-  color: #38bdf8;
+  color: var(--accent);
   margin-bottom: 15px;
 }
 
 /* EXPERIENCE */
 .job {
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 .job h4 {
-  color: #e2e8f0;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .job span {
-  font-size: 14px;
-  color: #64748b;
+  font-size: 13px;
+  color: var(--text-fade);
 }
 
-.skills span {
+.job p {
+  margin-top: 10px;
+  color: var(--text-muted);
+}
+
+/* TAGS */
+.tags {
+  margin-top: 10px;
+}
+
+.tags span {
   display: inline-block;
-  background: #1e293b;
-  padding: 6px 12px;
+  background: var(--badge);
+  color: var(--accent);
+  padding: 5px 10px;
   border-radius: 20px;
-  margin: 5px;
   font-size: 12px;
+  margin: 5px 5px 0 0;
+}
+
+/* SOCIALS */
+.social {
+  margin-top: 60px;
+}
+
+.social a {
+  margin-right: 15px;
+  color: var(--text-muted);
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.social a:hover {
+  color: var(--accent);
 }
 
 /* MOBILE */
@@ -104,10 +160,12 @@ body {
   body {
     flex-direction: column;
   }
+
   .sidebar {
-    position: relative;
     width: 100%;
+    position: relative;
   }
+
   .content {
     margin-left: 0;
     width: 100%;
@@ -135,7 +193,7 @@ body {
 
 <body>
 
-<!-- LEFT -->
+<!-- LEFT SIDEBAR -->
 <div class="sidebar">
   <h1>Rohit Kumar</h1>
   <h2>Web Developer</h2>
@@ -150,24 +208,22 @@ body {
     <a href="#skills">SKILLS</a>
   </div>
 
-  <p style="margin-top:50px;">
-    📧 rohitkrdevs@gmail.com <br>
-    📞 +91-7030093898
-  </p>
+  <div class="social">
+    <a href="https://github.com/rohitkrdevs">GitHub</a>
+    <a href="https://linkedin.com/in/rohitkrdevs">LinkedIn</a>
+  </div>
 </div>
 
-<!-- RIGHT -->
+<!-- RIGHT CONTENT -->
 <div class="content">
 
 <div id="about" class="section">
   <h3>About</h3>
   <p>
-    I am Rohit Kumar, a Web Developer from Ranchi with 5+ years of experience building and maintaining websites 
-    and internal tools using PHP, HTML, CSS, JavaScript, MySQL, and WordPress.
-    
+    I am Rohit Kumar, a Web Developer from Ranchi with 5+ years of experience building and maintaining 
+    websites and internal tools using PHP, HTML, CSS, JavaScript, MySQL, and WordPress.
     I specialize in responsive UI, SEO-friendly implementation, hosting deployment, and payment integrations.
-    
-    Currently, I am upskilling towards full stack development using MERN technologies.
+    Currently upskilling toward MERN stack development.
   </p>
 </div>
 
@@ -175,27 +231,30 @@ body {
   <h3>Experience</h3>
 
   <div class="job">
-    <h4>Web Developer - Curesta Global Limited</h4>
-    <span>Jul 2021 - Oct 2025</span>
+    <h4>Web Developer · Curesta Global Limited</h4>
+    <span>Jul 2021 – Oct 2025</span>
     <p>
-      Built internal tools using PHP, HTML, CSS, JS, MySQL. Improved UI consistency, implemented SEO improvements, 
-      developed dashboards, and integrated Razorpay & Stripe.
+      Built internal tools, improved UI consistency, implemented SEO, developed dashboards, 
+      and integrated Razorpay & Stripe.
+    </p>
+    <div class="tags">
+      <span>PHP</span><span>MySQL</span><span>JavaScript</span><span>WordPress</span>
+    </div>
+  </div>
+
+  <div class="job">
+    <h4>Web Developer · Vmak Research</h4>
+    <span>Nov 2020 – Jun 2021</span>
+    <p>
+      Developed websites, customized themes, and managed hosting deployments.
     </p>
   </div>
 
   <div class="job">
-    <h4>Web Developer - Vmak Research</h4>
-    <span>Nov 2020 - Jun 2021</span>
+    <h4>Junior Web Developer · GrubWeb</h4>
+    <span>Jul 2019 – Oct 2020</span>
     <p>
-      Developed websites using PHP & WordPress, customized themes, and handled hosting deployments.
-    </p>
-  </div>
-
-  <div class="job">
-    <h4>Junior Web Developer - GrubWeb Service</h4>
-    <span>Jul 2019 - Oct 2020</span>
-    <p>
-      Built responsive websites, worked with clients, and handled testing and bug fixing.
+      Built responsive client websites and handled testing and bug fixes.
     </p>
   </div>
 
@@ -204,29 +263,12 @@ body {
 <div id="skills" class="section">
   <h3>Skills</h3>
 
-  <div class="skills">
-    <span>HTML</span>
-    <span>CSS</span>
-    <span>JavaScript</span>
-    <span>PHP</span>
-    <span>MySQL</span>
-    <span>WordPress</span>
-    <span>Bootstrap</span>
-    <span>Tailwind</span>
-    <span>SEO</span>
-    <span>cPanel</span>
+  <div class="tags">
+    <span>HTML</span><span>CSS</span><span>JavaScript</span>
+    <span>PHP</span><span>MySQL</span><span>WordPress</span>
+    <span>Bootstrap</span><span>Tailwind</span><span>SEO</span>
   </div>
 
-</div>
-
-<div class="section">
-  <h3>Education</h3>
-  <p>B.Sc. Computer Science – Fergusson College (2016–2019)</p>
-</div>
-
-<div class="section">
-  <h3>Certifications</h3>
-  <p>freeCodeCamp, Simplilearn, Great Learning (Web & MERN related)</p>
 </div>
 
 </div>
