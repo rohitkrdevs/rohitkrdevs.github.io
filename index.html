@@ -60,6 +60,7 @@
           line-height: 1.75;
           text-rendering: optimizeLegibility;
           -webkit-font-smoothing: antialiased;
+          cursor: none;
         }
         
         /* TYPOGRAPHY */
@@ -89,11 +90,17 @@
         p {
           font-size: 15px;
           color: var(--text-muted);
+          letter-spacing: 0.2px;
+          word-spacing: 0.5px;
         }
         
-        /* LAYOUT FIX */
+        /* LAYOUT */
         .row {
           align-items: flex-start;
+        }
+        
+        .col-wrapper {
+          padding-top: 20px;
         }
         
         /* SIDEBAR */
@@ -104,6 +111,16 @@
         
         .sidebar p {
           margin-top: 16px;
+        }
+        
+        /* PROFILE IMAGE */
+        .profile-img {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 2px solid rgba(94,234,212,0.4);
+          margin-bottom: 18px;
         }
         
         /* NAV */
@@ -121,34 +138,34 @@
         
         /* SECTION */
         .section {
-          margin-bottom: 60px;
+          margin-bottom: 56px;
         }
         
-        /* CARD BASE */
+        /* CARDS */
         .card-custom {
           background: rgba(15, 23, 42, 0.6);
           border: 1px solid rgba(148, 163, 184, 0.08);
           border-radius: 12px;
-          padding: 20px;
+          padding: 18px;
           backdrop-filter: blur(6px);
-          transition: border 0.25s ease;
+          transition: border 0.25s ease, background 0.25s ease;
         }
         
         .card-custom:hover {
           border-color: rgba(94, 234, 212, 0.4);
         }
         
-        /* EXPERIENCE TIMELINE */
+        /* EXPERIENCE */
         .exp-timeline {
           display: grid;
           grid-template-columns: 130px 1fr;
           gap: 18px;
-          padding: 20px;
+          padding: 18px;
           border-radius: 12px;
           border: 1px solid rgba(148,163,184,0.08);
           background: rgba(15,23,42,0.6);
-          margin-bottom: 20px;
-          transition: border 0.25s;
+          margin-bottom: 18px;
+          transition: border 0.25s ease;
         }
         
         .exp-timeline:hover {
@@ -202,36 +219,12 @@
           color: var(--text-fade);
         }
         
-        /* SMOOTH SCROLL */
+        /* SCROLL */
         html {
           scroll-behavior: smooth;
         }
         
-        /* RESPONSIVE */
-        @media (max-width: 992px) {
-          .sidebar {
-            position: relative;
-            top: 0;
-            margin-bottom: 30px;
-          }
-        }
-        
-        @media (max-width: 768px) {
-          .exp-timeline {
-            grid-template-columns: 1fr;
-          }
-        
-          h1 {
-            font-size: 30px;
-          }
-        }
-
-        /* HIDE DEFAULT CURSOR */
-        body {
-          cursor: none;
-        }
-        
-        /* DOT */
+        /* CURSOR */
         .cursor-dot {
           width: 10px;
           height: 10px;
@@ -241,11 +234,9 @@
           pointer-events: none;
           z-index: 9999;
           box-shadow: 0 0 12px #5eead4, 0 0 25px rgba(94,234,212,0.6);
-        
           transform: translate(-50%, -50%);
         }
-                
-        /* OUTLINE */
+        
         .cursor-outline {
           width: 35px;
           height: 35px;
@@ -254,35 +245,49 @@
           border-radius: 50%;
           pointer-events: none;
           z-index: 9998;
-        
           transform: translate(-50%, -50%);
           transition: transform 0.15s ease;
         }
-        @media (max-width: 768px) {
-          .cursor-dot,
-          .cursor-outline {
-            display: none;
-          }
         
-          body {
-            cursor: default;
+        /* ================= RESPONSIVE ================= */
+        
+        /* TABLET */
+        @media (max-width: 992px) {
+          .sidebar {
+            position: relative;
+            margin-bottom: 30px;
           }
         }
-        .col-wrapper {
-          padding-top: 20px;
-        }
-        /* ================= MOBILE TYPOGRAPHY SPACING ================= */
+        
+        /* MOBILE */
         @media (max-width: 768px) {
         
-          /* PARAGRAPH TEXT */
+          /* Layout */
+          .container-xl {
+            padding-left: 18px;
+            padding-right: 18px;
+          }
+        
+          .sidebar {
+            margin-bottom: 35px;
+          }
+        
+          /* Profile */
+          .profile-img {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 14px;
+          }
+        
+          /* Typography spacing (no size increase) */
           p {
             letter-spacing: 0.3px;
             word-spacing: 1px;
             line-height: 1.9;
           }
         
-          /* HEADINGS */
           h1 {
+            font-size: 30px;
             letter-spacing: 0.5px;
           }
         
@@ -291,39 +296,45 @@
           }
         
           h3 {
-            letter-spacing: 1.2px; /* already uppercase style feel */
+            letter-spacing: 1.2px;
           }
         
           h4 {
             letter-spacing: 0.3px;
           }
         
-          /* NAV LINKS */
           .nav-link {
-            letter-spacing: 2px; /* cleaner spacing for menu */
+            letter-spacing: 2px;
           }
         
-          /* EXPERIENCE LIST */
           .exp-content li {
             letter-spacing: 0.2px;
             word-spacing: 0.8px;
             line-height: 1.8;
           }
         
-          /* TECH TAGS */
           .tech-stack span {
-            letter-spacing: 0.5px;
+            letter-spacing: 0.4px;
           }
         
-          /* SKILL TEXT */
-          .skill-card p {
-            letter-spacing: 0.25px;
-            word-spacing: 0.8px;
-          }
-        
-          /* CONTACT */
           .small {
             letter-spacing: 0.3px;
+          }
+        
+          /* Layout fix */
+          .exp-timeline {
+            grid-template-columns: 1fr;
+            padding: 16px;
+          }
+        
+          /* Cursor disable */
+          .cursor-dot,
+          .cursor-outline {
+            display: none;
+          }
+        
+          body {
+            cursor: default;
           }
         }
     </style>
@@ -336,6 +347,11 @@
             
             <!-- LEFT SIDEBAR -->
             <div class="col-lg-4 sidebar col-wrapper">
+                <img 
+                  src="https://avatars.githubusercontent.com/u/106913547?s=200" 
+                  alt="Rohit Kumar Web Developer Ranchi"
+                  class="profile-img"
+                />
                 <h1>Rohit Kumar</h1>
                 <h2>Web Developer in Ranchi</h2>
                 <p class="mt-3">
