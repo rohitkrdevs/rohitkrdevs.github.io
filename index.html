@@ -4,101 +4,113 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Rohit Kumar - Web Developer in Ranchi | PHP, WordPress, MERN</title>
+<title>Rohit Kumar - Web Developer in Ranchi</title>
 
-<meta name="description" content="Rohit Kumar is a Web Developer in Ranchi with 5+ years experience in PHP, WordPress, MySQL and modern web technologies. View resume, skills, projects and experience.">
+<meta name="description" content="Rohit Kumar is a Web Developer in Ranchi with 5+ years experience in PHP, WordPress, MySQL and MERN stack. View experience, skills and projects.">
 
-<meta name="keywords" content="Rohit Kumar Web Developer Ranchi, PHP Developer Ranchi, WordPress Developer Ranchi, MERN Developer Ranchi">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  background: #0f172a;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(120deg, #0a192f, #020617);
+  color: #cbd5f5;
+  display: flex;
+}
+
+/* LEFT SIDEBAR */
+.sidebar {
+  width: 35%;
+  min-height: 100vh;
+  padding: 60px 40px;
+  position: fixed;
+}
+
+.sidebar h1 {
+  font-size: 36px;
   color: #e2e8f0;
 }
 
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 20px;
-}
-
-header {
-  text-align: center;
-  padding: 40px 20px;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  color: #38bdf8;
-}
-
-header p {
+.sidebar h2 {
+  margin-top: 10px;
+  font-weight: 400;
   color: #94a3b8;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 20px;
+.sidebar p {
+  margin-top: 20px;
+  color: #64748b;
 }
 
-.card {
-  background: #1e293b;
-  padding: 20px;
-  border-radius: 12px;
+.nav {
+  margin-top: 50px;
 }
 
-h2 {
-  color: #22c55e;
-  margin-bottom: 10px;
+.nav a {
+  display: block;
+  margin: 15px 0;
+  color: #94a3b8;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.nav a:hover {
+  color: #38bdf8;
+}
+
+/* RIGHT CONTENT */
+.content {
+  margin-left: 35%;
+  padding: 60px;
+  width: 65%;
+}
+
+.section {
+  margin-bottom: 60px;
+}
+
+.section h3 {
+  color: #38bdf8;
+  margin-bottom: 15px;
+}
+
+/* EXPERIENCE */
+.job {
+  margin-bottom: 30px;
+}
+
+.job h4 {
+  color: #e2e8f0;
+}
+
+.job span {
+  font-size: 14px;
+  color: #64748b;
 }
 
 .skills span {
   display: inline-block;
-  background: #334155;
-  padding: 6px 10px;
+  background: #1e293b;
+  padding: 6px 12px;
+  border-radius: 20px;
   margin: 5px;
-  border-radius: 15px;
-  font-size: 13px;
+  font-size: 12px;
 }
 
-.timeline {
-  border-left: 2px solid #334155;
-  padding-left: 15px;
-}
-
-.timeline-item {
-  margin-bottom: 20px;
-}
-
-.timeline-item h3 {
-  margin: 0;
-  color: #38bdf8;
-}
-
-.timeline-item span {
-  font-size: 13px;
-  color: #94a3b8;
-}
-
-a {
-  color: #38bdf8;
-  text-decoration: none;
-}
-
-footer {
-  text-align: center;
-  margin-top: 40px;
-  color: #64748b;
-}
-
-@media(max-width: 800px) {
-  .grid {
-    grid-template-columns: 1fr;
+/* MOBILE */
+@media(max-width: 900px) {
+  body {
+    flex-direction: column;
+  }
+  .sidebar {
+    position: relative;
+    width: 100%;
+  }
+  .content {
+    margin-left: 0;
+    width: 100%;
   }
 }
 </style>
@@ -115,8 +127,7 @@ footer {
    "addressLocality": "Ranchi",
    "addressRegion": "Jharkhand",
    "addressCountry": "India"
- },
- "email": "rohitkrdevs@gmail.com"
+ }
 }
 </script>
 
@@ -124,123 +135,99 @@ footer {
 
 <body>
 
-<div class="container">
+<!-- LEFT -->
+<div class="sidebar">
+  <h1>Rohit Kumar</h1>
+  <h2>Web Developer</h2>
 
-<header>
-  <h1>Rohit Kumar - Web Developer in Ranchi</h1>
-  <p>5+ Years Experience | PHP • WordPress • MySQL | Learning MERN Stack</p>
-  <p>📞 +91-7030093898 | ✉ rohitkrdevs@gmail.com</p>
-</header>
-
-<div class="grid">
-
-<!-- LEFT COLUMN -->
-<div>
-
-<div class="card">
-  <h2>About</h2>
   <p>
-    Web Developer with 5+ years of experience in building and maintaining websites and internal tools using
-    PHP, HTML, CSS, JavaScript, MySQL, and WordPress. Experienced in responsive UI, SEO-friendly implementation,
-    hosting deployments, and payment integration.
+    I build scalable websites and internal tools using PHP, WordPress, and modern web technologies.
+  </p>
+
+  <div class="nav">
+    <a href="#about">ABOUT</a>
+    <a href="#experience">EXPERIENCE</a>
+    <a href="#skills">SKILLS</a>
+  </div>
+
+  <p style="margin-top:50px;">
+    📧 rohitkrdevs@gmail.com <br>
+    📞 +91-7030093898
   </p>
 </div>
 
-<div class="card">
-  <h2>Skills</h2>
+<!-- RIGHT -->
+<div class="content">
+
+<div id="about" class="section">
+  <h3>About</h3>
+  <p>
+    I am Rohit Kumar, a Web Developer from Ranchi with 5+ years of experience building and maintaining websites 
+    and internal tools using PHP, HTML, CSS, JavaScript, MySQL, and WordPress.
+    
+    I specialize in responsive UI, SEO-friendly implementation, hosting deployment, and payment integrations.
+    
+    Currently, I am upskilling towards full stack development using MERN technologies.
+  </p>
+</div>
+
+<div id="experience" class="section">
+  <h3>Experience</h3>
+
+  <div class="job">
+    <h4>Web Developer - Curesta Global Limited</h4>
+    <span>Jul 2021 - Oct 2025</span>
+    <p>
+      Built internal tools using PHP, HTML, CSS, JS, MySQL. Improved UI consistency, implemented SEO improvements, 
+      developed dashboards, and integrated Razorpay & Stripe.
+    </p>
+  </div>
+
+  <div class="job">
+    <h4>Web Developer - Vmak Research</h4>
+    <span>Nov 2020 - Jun 2021</span>
+    <p>
+      Developed websites using PHP & WordPress, customized themes, and handled hosting deployments.
+    </p>
+  </div>
+
+  <div class="job">
+    <h4>Junior Web Developer - GrubWeb Service</h4>
+    <span>Jul 2019 - Oct 2020</span>
+    <p>
+      Built responsive websites, worked with clients, and handled testing and bug fixing.
+    </p>
+  </div>
+
+</div>
+
+<div id="skills" class="section">
+  <h3>Skills</h3>
+
   <div class="skills">
-    <span>HTML</span><span>CSS</span><span>JavaScript</span>
-    <span>PHP</span><span>MySQL</span><span>WordPress</span>
-    <span>Bootstrap</span><span>Tailwind</span>
-    <span>SEO</span><span>cPanel</span>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>PHP</span>
+    <span>MySQL</span>
+    <span>WordPress</span>
+    <span>Bootstrap</span>
+    <span>Tailwind</span>
+    <span>SEO</span>
+    <span>cPanel</span>
   </div>
-</div>
-
-<div class="card">
-  <h2>Technologies</h2>
-  <p>jQuery, Git/GitHub, Debugging, Cross-browser testing</p>
-</div>
-
-<div class="card">
-  <h2>Certifications</h2>
-  <ul>
-    <li>freeCodeCamp – Responsive Web Design (2023)</li>
-    <li>freeCodeCamp – JavaScript Algorithms (2023)</li>
-    <li>Simplilearn – MERN Stack Fundamentals (2024)</li>
-    <li>Great Learning – Application Security (2024)</li>
-  </ul>
-</div>
 
 </div>
 
-<!-- RIGHT COLUMN -->
-<div>
-
-<div class="card">
-  <h2>Professional Experience</h2>
-
-  <div class="timeline">
-
-    <div class="timeline-item">
-      <h3>Web Developer</h3>
-      <span>Curesta Global Limited | Jul 2021 – Oct 2025</span>
-      <ul>
-        <li>Built internal tools using PHP, HTML, CSS, JS, MySQL</li>
-        <li>Improved UI consistency and mobile responsiveness</li>
-        <li>Implemented SEO improvements</li>
-        <li>Developed dashboards and admin panels</li>
-        <li>Integrated Razorpay & Stripe</li>
-      </ul>
-    </div>
-
-    <div class="timeline-item">
-      <h3>Web Developer</h3>
-      <span>Vmak Research & Services | Nov 2020 – Jun 2021</span>
-      <ul>
-        <li>Developed websites using PHP & WordPress</li>
-        <li>Customized themes and plugins</li>
-        <li>Managed deployments on hosting servers</li>
-      </ul>
-    </div>
-
-    <div class="timeline-item">
-      <h3>Junior Web Developer</h3>
-      <span>GrubWeb Service | Jul 2019 – Oct 2020</span>
-      <ul>
-        <li>Built responsive websites</li>
-        <li>Client communication & requirement gathering</li>
-        <li>Testing and bug fixing</li>
-      </ul>
-    </div>
-
-  </div>
+<div class="section">
+  <h3>Education</h3>
+  <p>B.Sc. Computer Science – Fergusson College (2016–2019)</p>
 </div>
 
-<div class="card">
-  <h2>Education</h2>
-  <ul>
-    <li>B.Sc. Computer Science – Fergusson College, Pune (2016–2019)</li>
-    <li>Intermediate – Army Public School, Ranchi (2015)</li>
-    <li>Matriculate – Army Public School, Ambala (2013)</li>
-  </ul>
+<div class="section">
+  <h3>Certifications</h3>
+  <p>freeCodeCamp, Simplilearn, Great Learning (Web & MERN related)</p>
 </div>
-
-<div class="card">
-  <h2>Projects & Features</h2>
-  <ul>
-    <li>Forms, dashboards, admin panels</li>
-    <li>Payment gateway integration (Razorpay, Stripe)</li>
-    <li>SEO-friendly website structures</li>
-  </ul>
-</div>
-
-</div>
-
-</div>
-
-<footer>
-  <p>© 2026 Rohit Kumar | Web Developer in Ranchi</p>
-</footer>
 
 </div>
 
