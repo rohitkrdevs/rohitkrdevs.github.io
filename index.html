@@ -196,6 +196,76 @@
           }
         }
     </style>
+    <style>
+        /* CARD BASE */
+        .card-custom {
+          background: rgba(15, 23, 42, 0.6);
+          border: 1px solid rgba(148, 163, 184, 0.08);
+          border-radius: 14px;
+          padding: 22px;
+          transition: all 0.3s ease;
+          backdrop-filter: blur(6px);
+        }
+        
+        .card-custom:hover {
+          transform: translateY(-4px);
+          border-color: rgba(94, 234, 212, 0.4);
+          box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        /* SECTION WRAPPER */
+        .section-card {
+          padding: 30px;
+          border-radius: 16px;
+          background: rgba(2, 6, 23, 0.6);
+          border: 1px solid rgba(148, 163, 184, 0.06);
+          margin-bottom: 60px;
+        }
+        
+        /* EXPERIENCE CARD */
+        .exp-card h4 {
+          font-weight: 600;
+        }
+        
+        .exp-card span {
+          font-size: 13px;
+          color: var(--text-fade);
+        }
+        
+        .exp-card ul {
+          margin-top: 12px;
+          padding-left: 18px;
+        }
+        
+        .exp-card li {
+          margin-bottom: 6px;
+          font-size: 14px;
+          color: var(--text-muted);
+        }
+        
+        /* SKILL CARDS */
+        .skill-card {
+          text-align: left;
+          height: 100%;
+        }
+        
+        .skill-card h5 {
+          font-size: 14px;
+          margin-bottom: 10px;
+          color: var(--accent);
+        }
+        
+        .skill-card p {
+          font-size: 14px;
+          color: var(--text-muted);
+        }
+        
+        /* GRID GAP */
+        .card-grid {
+          display: grid;
+          gap: 20px;
+        }
+</style>
 
 </head>
 
@@ -241,69 +311,95 @@
                         </p>
                 </div>
 
-                <div id="experience" class="section">
+<div id="experience" class="section-card">
+  <h3>Professional Experience</h3>
 
-                    <h3>Professional Experience</h3>
+  <div class="card-grid">
 
-                    <div class="job">
-                        <h4>Web Developer · Curesta Global Limited</h4>
-                        <span>Jul 2021 – Oct 2025</span>
+    <div class="card-custom exp-card">
+      <h4>Web Developer · Curesta Global Limited</h4>
+      <span>Jul 2021 – Oct 2025</span>
+      <ul>
+        <li>Developed and maintained internal tools using PHP, HTML, CSS, JavaScript, and MySQL.</li>
+        <li>Improved mobile responsiveness and UI consistency across platforms.</li>
+        <li>Implemented SEO improvements and optimized structure.</li>
+        <li>Built dashboards, admin panels, and workflow systems.</li>
+        <li>Integrated Razorpay and Stripe payment gateways.</li>
+      </ul>
+    </div>
 
-                        <ul>
-                            <li>Developed and maintained internal tools using PHP, HTML, CSS, JavaScript, and MySQL.</li>
-                            <li>Improved mobile responsiveness and UI consistency across multiple platforms.</li>
-                            <li>Implemented SEO improvements and optimized website structure for better performance.</li>
-                            <li>Built forms, dashboards, and admin panels for internal workflows.</li>
-                            <li>Integrated Razorpay and Stripe payment gateways for seamless transactions.</li>
-                        </ul>
-                    </div>
+    <div class="card-custom exp-card">
+      <h4>Web Developer · Vmak Research</h4>
+      <span>Nov 2020 – Jun 2021</span>
+      <ul>
+        <li>Developed websites using PHP, WordPress, HTML, CSS, JS.</li>
+        <li>Customized themes and configured plugins.</li>
+        <li>Managed hosting and deployments.</li>
+      </ul>
+    </div>
 
-                    <div class="job">
-                        <h4>Web Developer · Vmak Research & Services</h4>
-                        <span>Nov 2020 – Jun 2021</span>
+    <div class="card-custom exp-card">
+      <h4>Junior Web Developer · GrubWeb</h4>
+      <span>Jul 2019 – Oct 2020</span>
+      <ul>
+        <li>Built responsive websites for clients.</li>
+        <li>Worked directly with clients on requirements.</li>
+        <li>Performed testing and bug fixing.</li>
+      </ul>
+    </div>
 
-                        <ul>
-                            <li>Developed dynamic websites using PHP, WordPress, HTML, CSS, and JavaScript.</li>
-                            <li>Customized WordPress themes and configured plugins based on client requirements.</li>
-                            <li>Managed deployments, hosting setup, and performance improvements.</li>
-                        </ul>
-                    </div>
+  </div>
+</div>
 
-                    <div class="job">
-                        <h4>Junior Web Developer · GrubWeb Service</h4>
-                        <span>Jul 2019 – Oct 2020</span>
+<div id="skills" class="section-card">
+  <h3>Skills & Technologies</h3>
 
-                        <ul>
-                            <li>Built responsive client websites with a focus on usability and layout consistency.</li>
-                            <li>Collaborated directly with clients to understand requirements and deliver solutions.</li>
-                            <li>Performed testing, debugging, and cross-browser compatibility fixes.</li>
-                        </ul>
-                    </div>
+  <div class="row g-4">
 
+    <div class="col-md-6">
+      <div class="card-custom skill-card">
+        <h5>Core Technologies</h5>
+        <p>HTML, CSS, JavaScript (Basic), PHP, MySQL</p>
+      </div>
+    </div>
 
+    <div class="col-md-6">
+      <div class="card-custom skill-card">
+        <h5>UI & Styling</h5>
+        <p>Bootstrap, Tailwind CSS, Responsive Design</p>
+      </div>
+    </div>
 
-                </div>
+    <div class="col-md-6">
+      <div class="card-custom skill-card">
+        <h5>WordPress</h5>
+        <p>Setup, theme customization, plugins, page builders</p>
+      </div>
+    </div>
 
-                <div id="skills" class="section">
+    <div class="col-md-6">
+      <div class="card-custom skill-card">
+        <h5>Hosting</h5>
+        <p>cPanel, domains, database setup</p>
+      </div>
+    </div>
 
-                    <h3>Skills & Technologies</h3>
+    <div class="col-md-6">
+      <div class="card-custom skill-card">
+        <h5>Features</h5>
+        <p>Dashboards, admin panels, Razorpay & Stripe integration</p>
+      </div>
+    </div>
 
-                    <p><strong>Core Technologies:</strong> HTML, CSS, JavaScript (Basic), PHP, MySQL</p>
+    <div class="col-md-6">
+      <div class="card-custom skill-card">
+        <h5>Other</h5>
+        <p>SEO basics, Ads, Debugging, Git/GitHub</p>
+      </div>
+    </div>
 
-                    <p><strong>UI & Styling:</strong> Bootstrap, Tailwind CSS (Basic), Responsive Web Design</p>
-
-                    <p><strong>WordPress:</strong> Website setup, theme customization, plugin integration, page builders</p>
-
-                    <p><strong>Hosting & Deployment:</strong> Shared hosting, cPanel, domain configuration, database setup</p>
-
-                    <p><strong>Features & Integrations:</strong> Forms, dashboards, admin panels, Razorpay & Stripe payment integration</p>
-
-                    <p><strong>Marketing & SEO:</strong> SEO basics, Meta Ads (Basic), Google Ads (Basic)</p>
-
-                    <p><strong>Tools:</strong> Debugging, cross-browser testing, Git & GitHub (Basic)</p>
-
-
-                </div>
+  </div>
+</div>
 
             </div>
 
