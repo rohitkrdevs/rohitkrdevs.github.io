@@ -442,15 +442,15 @@ window.addEventListener("mousemove", (e) => {
   outline.style.top = clientY + "px";
 });
 
-/* HOVER EFFECT */
+/* FIXED HOVER */
 document.querySelectorAll("a, button").forEach(el => {
   el.addEventListener("mouseenter", () => {
-    outline.style.transform = "scale(1.8)";
+    outline.style.transform = "translate(-50%, -50%) scale(1.8)";
   });
+
   el.addEventListener("mouseleave", () => {
-    outline.style.transform = "scale(1)";
+    outline.style.transform = "translate(-50%, -50%) scale(1)";
   });
 });
 </script>
-
 </html>
