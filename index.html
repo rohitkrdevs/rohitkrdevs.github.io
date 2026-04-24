@@ -292,6 +292,78 @@
           color: #020617;
           transform: translateY(-1px);
         }
+
+        /* TIMELINE EXPERIENCE CARD */
+.exp-timeline {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 20px;
+  padding: 24px;
+  border-radius: 14px;
+  background: linear-gradient(120deg, rgba(15,23,42,0.6), rgba(2,6,23,0.8));
+  border: 1px solid rgba(148,163,184,0.08);
+  transition: all 0.3s ease;
+}
+
+.exp-timeline:hover {
+  transform: translateY(-4px);
+  border-color: rgba(94,234,212,0.4);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* LEFT DATE */
+.exp-date {
+  font-size: 13px;
+  color: var(--text-fade);
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+/* RIGHT CONTENT */
+.exp-content h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.exp-content h4 span {
+  color: var(--accent);
+}
+
+.exp-content p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* TECH CHIPS */
+.tech-stack {
+  margin-top: 14px;
+}
+
+.tech-stack span {
+  display: inline-block;
+  background: rgba(94,234,212,0.08);
+  color: var(--accent);
+  border: 1px solid rgba(94,234,212,0.25);
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 999px;
+  margin: 6px 6px 0 0;
+  transition: 0.25s ease;
+}
+
+.tech-stack span:hover {
+  background: var(--accent);
+  color: #020617;
+}
+
+/* MOBILE */
+@media(max-width: 768px) {
+  .exp-timeline {
+    grid-template-columns: 1fr;
+  }
+}
     </style>
 
 </head>
@@ -345,6 +417,37 @@
 
                     <div class="card-grid">
 
+                        <div class="exp-timeline">
+
+  <!-- LEFT DATE -->
+  <div class="exp-date">
+    2021 — 2025
+  </div>
+
+  <!-- RIGHT CONTENT -->
+  <div class="exp-content">
+    <h4>
+      Web Developer · <span>Curesta Global Limited</span>
+    </h4>
+
+    <p>
+      Built and maintained internal tools, dashboards, and web platforms using PHP and MySQL. 
+      Improved UI consistency, optimized SEO structure, and implemented scalable solutions 
+      for real-world business workflows including payment systems.
+    </p>
+
+    <div class="tech-stack">
+      <span>PHP</span>
+      <span>MySQL</span>
+      <span>JavaScript</span>
+      <span>WordPress</span>
+      <span>Razorpay</span>
+      <span>Stripe</span>
+    </div>
+
+  </div>
+
+</div>
                         <div class="card-custom exp-card">
                           <h4>Web Developer · Curesta Global Limited</h4>
                           <span>Jul 2021 – Oct 2025</span>
