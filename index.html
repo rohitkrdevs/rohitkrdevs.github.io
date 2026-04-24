@@ -25,21 +25,42 @@
           --badge: #112240;
         }
         
+        /* RESET */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        
+        /* BODY */
         body {
           font-family: 'Inter', sans-serif;
           background: linear-gradient(120deg, var(--bg-soft), var(--bg));
           color: var(--text-main);
+          line-height: 1.7;
+          letter-spacing: 0.3px;
         }
         
-        /* Sidebar */
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4, h5 {
+          letter-spacing: 0.5px;
+        }
+        
+        p {
+          margin-bottom: 14px;
+          color: var(--text-muted);
+        }
+        
+        /* SIDEBAR */
         .sidebar {
           position: sticky;
-          top: 80px;
+          top: 100px;
         }
         
         .sidebar h1 {
-          font-size: 38px;
+          font-size: 40px;
           font-weight: 700;
+          margin-bottom: 5px;
         }
         
         .sidebar h2 {
@@ -48,33 +69,69 @@
         }
         
         .sidebar p {
-          color: var(--text-fade);
+          margin-top: 20px;
+          font-size: 15px;
         }
         
-        /* Nav */
+        /* NAV */
         .nav-link {
           color: var(--text-fade);
-          padding-left: 0;
-          letter-spacing: 1px;
+          padding: 6px 0;
+          letter-spacing: 1.5px;
+          font-size: 13px;
+          position: relative;
+          transition: all 0.3s ease;
+        }
+        
+        /* line animation */
+        .nav-link::before {
+          content: "";
+          position: absolute;
+          left: -30px;
+          top: 50%;
+          width: 0;
+          height: 1px;
+          background: var(--accent);
+          transition: 0.3s;
         }
         
         .nav-link:hover {
           color: var(--text-main);
+          transform: translateX(5px);
         }
         
-        /* Sections */
+        .nav-link:hover::before {
+          width: 20px;
+        }
+        
+        /* SECTIONS */
         .section {
-          margin-bottom: 60px;
+          margin-bottom: 70px;
         }
         
         .section h3 {
           color: var(--accent);
-          margin-bottom: 15px;
+          margin-bottom: 18px;
+          font-size: 18px;
+          letter-spacing: 1px;
         }
         
-        /* Jobs */
-        .job h5 {
+        /* EXPERIENCE */
+        .job {
+          margin-bottom: 35px;
+          padding: 18px;
+          border-radius: 10px;
+          transition: 0.3s ease;
+        }
+        
+        .job:hover {
+          background: rgba(94, 234, 212, 0.05);
+          transform: translateY(-2px);
+        }
+        
+        .job h4 {
           font-weight: 600;
+          margin-bottom: 5px;
         }
         
         .job span {
@@ -82,19 +139,61 @@
           color: var(--text-fade);
         }
         
-        .job p {
-          color: var(--text-muted);
+        .job ul {
+          margin-top: 10px;
+          padding-left: 18px;
         }
         
-        /* Tags */
+        .job li {
+          margin-bottom: 6px;
+          color: var(--text-muted);
+          font-size: 14px;
+        }
+        
+        /* SKILLS TEXT */
+        .section p strong {
+          color: var(--text-main);
+        }
+        
+        /* TAGS */
+        .tags {
+          margin-top: 10px;
+        }
+        
         .tags span {
           display: inline-block;
           background: var(--badge);
           color: var(--accent);
-          padding: 5px 10px;
-          border-radius: 20px;
+          padding: 6px 12px;
+          border-radius: 999px;
           font-size: 12px;
-          margin: 5px 5px 0 0;
+          margin: 6px 6px 0 0;
+          transition: 0.3s ease;
+        }
+        
+        .tags span:hover {
+          background: var(--accent);
+          color: #020617;
+        }
+        
+        /* CONTACT */
+        .small {
+          color: var(--text-fade);
+          font-size: 14px;
+        }
+        
+        /* SCROLL SMOOTH */
+        html {
+          scroll-behavior: smooth;
+        }
+        
+        /* MOBILE */
+        @media(max-width: 992px) {
+          .sidebar {
+            position: relative;
+            top: 0;
+            margin-bottom: 40px;
+          }
         }
     </style>
 
