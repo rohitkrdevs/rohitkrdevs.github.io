@@ -77,7 +77,7 @@
         /* SIDEBAR */
         .sidebar {
           position: sticky;
-          top: 100px;
+          top: 0;
         }
         
         .sidebar p {
@@ -246,18 +246,21 @@
             cursor: default;
           }
         }
+        .col-wrapper {
+          padding-top: 10px;
+        }
     </style>
 
 </head>
 
 <body>
 
-    <div class="container-xl py-5">
+    <div class="container-xl pt-5 pb-3">
 
         <div class="row">
 
             <!-- LEFT SIDEBAR -->
-            <div class="col-lg-4 sidebar">
+            <div class="col-lg-4 sidebar col-wrapper">
                 <h1>Rohit Kumar</h1>
                 <h2>Web Developer</h2>
 
@@ -278,7 +281,7 @@
             </div>
 
             <!-- RIGHT CONTENT -->
-            <div class="col-lg-8">
+           <div class="col-lg-8 col-wrapper">
 
                 <div id="about" class="section">
                     <h3>About</h3>
