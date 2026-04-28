@@ -21,20 +21,18 @@ body {
   background: linear-gradient(120deg, var(--bg-soft), var(--bg));
   color: var(--text-main);
   line-height: 1.75;
-  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  cursor: none;
 }
 
 /* ================= TYPOGRAPHY ================= */
 h1 {
   font-size: 38px;
   font-weight: 700;
+  color: var(--text-main);
 }
 
 h2 {
   font-size: 18px;
-  font-weight: 500;
   color: var(--text-muted);
 }
 
@@ -47,14 +45,12 @@ h3 {
 
 h4 {
   font-size: 17px;
-  font-weight: 600;
+  color: var(--text-main);
 }
 
 p {
   font-size: 15px;
   color: var(--text-muted);
-  letter-spacing: 0.2px;
-  word-spacing: 0.5px;
 }
 
 /* ================= LAYOUT ================= */
@@ -82,39 +78,26 @@ p {
 
 /* ================= PROFILE ================= */
 .profile-img {
-  width: 240px;
-  height: 240px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid rgba(94,234,212,0.4);
   margin-bottom: 18px;
 }
 
-/* ================= NAVIGATION ================= */
+/* ================= NAV ================= */
 .nav-link {
-  color: var(--text-fade);
+  color: var(--text-fade) !important; /* override Bootstrap */
   font-size: 13px;
   letter-spacing: 1.5px;
   padding: 6px 0;
   transition: 0.25s;
+  text-decoration: none;
 }
 
 .nav-link:hover {
-  color: var(--text-main);
-}
-
-/* ================= CARDS ================= */
-.card-custom {
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid rgba(148, 163, 184, 0.08);
-  border-radius: 12px;
-  padding: 18px;
-  backdrop-filter: blur(6px);
-  transition: border 0.25s ease;
-}
-
-.card-custom:hover {
-  border-color: rgba(94, 234, 212, 0.4);
+  color: var(--text-main) !important;
 }
 
 /* ================= EXPERIENCE ================= */
@@ -127,11 +110,6 @@ p {
   border: 1px solid rgba(148,163,184,0.08);
   background: rgba(15,23,42,0.6);
   margin-bottom: 18px;
-  transition: border 0.25s ease;
-}
-
-.exp-timeline:hover {
-  border-color: rgba(94,234,212,0.4);
 }
 
 .exp-date {
@@ -150,7 +128,18 @@ p {
 
 .exp-content li {
   font-size: 14px;
-  margin-bottom: 5px;
+  color: var(--text-muted);
+}
+
+/* ================= TECH STACK ================= */
+.tech-stack span {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 11px;
+  border-radius: 999px;
+  margin: 5px 5px 0 0;
+  border: 1px solid rgba(94,234,212,0.25);
+  color: var(--accent);
 }
 
 /* ================= SKILLS ================= */
@@ -159,7 +148,6 @@ p {
   border: 1px solid rgba(148, 163, 184, 0.08);
   border-radius: 14px;
   padding: 22px;
-  backdrop-filter: blur(8px);
   height: 100%;
 }
 
@@ -167,7 +155,6 @@ p {
   font-size: 14px;
   color: var(--accent);
   margin-bottom: 14px;
-  letter-spacing: 0.6px;
 }
 
 .skill-tags {
@@ -183,7 +170,6 @@ p {
   background: rgba(94, 234, 212, 0.08);
   border: 1px solid rgba(94, 234, 212, 0.25);
   color: var(--accent);
-  letter-spacing: 0.3px;
 }
 
 /* ================= CONTACT ================= */
@@ -197,7 +183,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ================= CUSTOM CURSOR ================= */
+/* ================= CURSOR ================= */
 .cursor-dot {
   width: 10px;
   height: 10px;
@@ -206,25 +192,21 @@ html {
   position: fixed;
   pointer-events: none;
   z-index: 9999;
-  box-shadow: 0 0 12px var(--accent), 0 0 25px rgba(94,234,212,0.6);
-  transform: translate(-50%, -50%);
 }
 
 .cursor-outline {
   width: 35px;
   height: 35px;
   border: 1px solid rgba(94,234,212,0.5);
-  position: fixed;
   border-radius: 50%;
+  position: fixed;
   pointer-events: none;
   z-index: 9998;
-  transform: translate(-50%, -50%);
-  transition: transform 0.15s ease;
 }
 
 /* ================= RESPONSIVE ================= */
 
-/* TABLET */
+/* Tablet */
 @media (max-width: 992px) {
   .sidebar {
     position: relative;
@@ -232,7 +214,7 @@ html {
   }
 }
 
-/* MOBILE */
+/* Mobile */
 @media (max-width: 768px) {
 
   .container-xl {
@@ -241,13 +223,12 @@ html {
   }
 
   .sidebar {
-    margin-bottom: 35px;
     text-align: center;
   }
 
   .profile-img {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     margin: 0 auto 14px;
     display: block;
   }
@@ -256,11 +237,11 @@ html {
     align-items: center;
   }
 
-  .nav-link {
-    letter-spacing: 2px;
-    text-align: center;
+  .exp-timeline {
+    grid-template-columns: 1fr;
   }
 
+  /* Typography spacing */
   p {
     letter-spacing: 0.3px;
     word-spacing: 1px;
@@ -272,43 +253,11 @@ html {
     letter-spacing: 0.5px;
   }
 
-  h2 {
-    letter-spacing: 0.4px;
+  .nav-link {
+    letter-spacing: 2px;
   }
 
-  h3 {
-    letter-spacing: 1.2px;
-  }
-
-  h4 {
-    letter-spacing: 0.3px;
-  }
-
-  .exp-content li {
-    letter-spacing: 0.2px;
-    word-spacing: 0.8px;
-    line-height: 1.8;
-  }
-
-  .exp-timeline {
-    grid-template-columns: 1fr;
-    padding: 16px;
-  }
-
-  .section {
-    margin-bottom: 50px;
-  }
-
-  .skill-box {
-    padding: 18px;
-  }
-
-  .skill-tags span {
-    font-size: 11px;
-    padding: 5px 10px;
-  }
-
-  /* Disable custom cursor */
+  /* Disable cursor */
   .cursor-dot,
   .cursor-outline {
     display: none;
