@@ -1,283 +1,91 @@
-/* ================= ROOT VARIABLES ================= */
+/* ================= ROOT ================= */
 :root {
-  --bg: #020617;
-  --bg-soft: #0a192f;
-  --text-main: #e2e8f0;
-  --text-muted: #94a3b8;
-  --text-fade: #64748b;
   --accent: #5eead4;
 }
 
-/* ================= RESET ================= */
+/* ================= BASE ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ================= BODY ================= */
-body {
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(120deg, var(--bg-soft), var(--bg));
-  color: var(--text-main);
-  line-height: 1.75;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* ================= TYPOGRAPHY ================= */
-h1 {
-  font-size: 38px;
-  font-weight: 700;
-  color: var(--text-main);
-}
-
-h2 {
-  font-size: 18px;
-  color: var(--text-muted);
-}
-
-h3 {
-  font-size: 16px;
-  letter-spacing: 1px;
-  color: var(--accent);
-  margin-bottom: 18px;
-}
-
-h4 {
-  font-size: 17px;
-  color: var(--text-main);
-}
-
-p {
-  font-size: 15px;
-  color: var(--text-muted);
-}
-
-/* ================= LAYOUT ================= */
-.col-wrapper {
-  padding-top: 20px;
-}
-
-.section {
-  margin-bottom: 56px;
-}
-
-/* ================= FIXED SIDEBAR (DESKTOP) ================= */
-@media (min-width: 992px) {
-
-  .row {
-    display: block; /* override bootstrap flex */
-  }
-
-  .sidebar {
-    position: fixed;
-    top: 80px;
-    left: calc((100% - 1140px) / 2);
-    width: 320px;
-  }
-
-  .col-lg-8 {
-    margin-left: calc(320px + 60px);
-  }
-}
-
-/* ================= TABLET & MOBILE ================= */
-@media (max-width: 991px) {
-
-  .row {
-    display: flex;
-  }
-
-  .sidebar {
-    position: relative;
-    width: 100%;
-    left: 0;
-    top: 0;
-    margin-bottom: 30px;
-  }
-
-  .col-lg-8 {
-    margin-left: 0;
-  }
-}
-
-/* ================= PROFILE ================= */
-.profile-img {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid rgba(94,234,212,0.4);
-  margin-bottom: 18px;
-}
-
-/* ================= SIDEBAR ================= */
-.sidebar p {
-  margin-top: 16px;
-}
-
-/* ================= NAV ================= */
-.nav-link {
-  color: var(--text-fade) !important;
-  font-size: 13px;
-  letter-spacing: 1.5px;
-  padding: 6px 0;
-  transition: 0.25s;
-  text-decoration: none;
-}
-
-.nav-link:hover {
-  color: var(--text-main) !important;
-}
-
-/* ================= EXPERIENCE ================= */
-.exp-timeline {
-  display: grid;
-  grid-template-columns: 130px 1fr;
-  gap: 18px;
-  padding: 18px;
-  border-radius: 12px;
-  border: 1px solid rgba(148,163,184,0.08);
-  background: rgba(15,23,42,0.6);
-  margin-bottom: 18px;
-}
-
-.exp-date {
-  font-size: 12px;
-  color: var(--text-fade);
-}
-
-.exp-content h4 span {
-  color: var(--accent);
-}
-
-.exp-content ul {
-  margin-top: 10px;
-  padding-left: 18px;
-}
-
-.exp-content li {
-  font-size: 14px;
-  color: var(--text-muted);
-}
-
-/* ================= TECH STACK ================= */
-.tech-stack span {
-  display: inline-block;
-  padding: 5px 10px;
-  font-size: 11px;
-  border-radius: 999px;
-  margin: 5px 5px 0 0;
-  border: 1px solid rgba(94,234,212,0.25);
-  color: var(--accent);
-}
-
-/* ================= SKILLS ================= */
-.skill-box {
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid rgba(148, 163, 184, 0.08);
-  border-radius: 14px;
-  padding: 22px;
-  height: 100%;
-}
-
-.skill-box h5 {
-  font-size: 14px;
-  color: var(--accent);
-  margin-bottom: 14px;
-}
-
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.skill-tags span {
-  font-size: 12px;
-  padding: 6px 12px;
-  border-radius: 999px;
-  background: rgba(94, 234, 212, 0.08);
-  border: 1px solid rgba(94, 234, 212, 0.25);
-  color: var(--accent);
-}
-
-/* ================= CONTACT ================= */
-.small {
-  font-size: 13px;
-  color: var(--text-fade);
-}
-
-/* ================= SCROLL ================= */
 html {
   scroll-behavior: smooth;
 }
 
-/* ================= CURSOR ================= */
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ================= CUSTOM CURSOR ================= */
 .cursor-dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   background: var(--accent);
   border-radius: 50%;
   position: fixed;
-  pointer-events: none;
   z-index: 9999;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
 }
 
 .cursor-outline {
-  width: 35px;
-  height: 35px;
-  border: 1px solid rgba(94,234,212,0.5);
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(94, 234, 212, 0.5);
   border-radius: 50%;
   position: fixed;
-  pointer-events: none;
   z-index: 9998;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease;
+}
+
+/* Hover grow effect */
+a:hover ~ .cursor-outline,
+button:hover ~ .cursor-outline {
+  transform: translate(-50%, -50%) scale(1.6);
+}
+
+/* ================= CHIP (Skill Tags) ================= */
+.chip {
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(94, 234, 212, 0.3);
+  color: var(--accent);
+  transition: all 0.2s ease;
+}
+
+.chip:hover {
+  background: rgba(94, 234, 212, 0.1);
+  border-color: var(--accent);
+}
+
+/* ================= CARD HOVER ================= */
+.card-hover {
+  transition: all 0.25s ease;
+}
+
+.card-hover:hover {
+  border-color: rgba(94, 234, 212, 0.4);
+  transform: translateY(-2px);
+}
+
+/* ================= SCROLLBAR ================= */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(94, 234, 212, 0.3);
+  border-radius: 10px;
 }
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
-
-  .container-xl {
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-
-  .sidebar {
-    text-align: center;
-  }
-
-  .profile-img {
-    width: 180px;
-    height: 180px;
-    margin: 0 auto 14px;
-    display: block;
-  }
-
-  .sidebar nav {
-    align-items: center;
-  }
-
-  .exp-timeline {
-    grid-template-columns: 1fr;
-  }
-
-  /* Typography spacing */
-  p {
-    letter-spacing: 0.3px;
-    word-spacing: 1px;
-    line-height: 1.9;
-  }
-
-  h1 {
-    font-size: 30px;
-    letter-spacing: 0.5px;
-  }
-
-  .nav-link {
-    letter-spacing: 2px;
-  }
-
-  /* Disable custom cursor */
   .cursor-dot,
   .cursor-outline {
     display: none;
