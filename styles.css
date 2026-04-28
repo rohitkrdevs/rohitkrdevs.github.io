@@ -54,10 +54,6 @@ p {
 }
 
 /* ================= LAYOUT ================= */
-.row {
-  align-items: flex-start;
-}
-
 .col-wrapper {
   padding-top: 20px;
 }
@@ -66,37 +62,43 @@ p {
   margin-bottom: 56px;
 }
 
-/* ================= SIDEBAR ================= */
-/* .sidebar {
-  position: sticky;
-  top: 0;
-} */
-/* DESKTOP FIXED SIDEBAR */
+/* ================= FIXED SIDEBAR (DESKTOP) ================= */
 @media (min-width: 992px) {
-  .sidebar {
-    position: fixed;
-    top: 80px; /* adjust based on your top spacing */
-    width: 320px; /* match your layout */
+
+  .row {
+    display: block; /* override bootstrap flex */
   }
 
-  /* Push right content */
+  .sidebar {
+    position: fixed;
+    top: 80px;
+    left: calc((100% - 1140px) / 2);
+    width: 320px;
+  }
+
   .col-lg-8 {
-    margin-left: 360px; /* sidebar width + gap */
+    margin-left: calc(320px + 60px);
   }
 }
+
+/* ================= TABLET & MOBILE ================= */
 @media (max-width: 991px) {
+
+  .row {
+    display: flex;
+  }
+
   .sidebar {
     position: relative;
     width: 100%;
+    left: 0;
+    top: 0;
+    margin-bottom: 30px;
   }
 
   .col-lg-8 {
     margin-left: 0;
   }
-}
-
-.sidebar p {
-  margin-top: 16px;
 }
 
 /* ================= PROFILE ================= */
@@ -109,9 +111,14 @@ p {
   margin-bottom: 18px;
 }
 
+/* ================= SIDEBAR ================= */
+.sidebar p {
+  margin-top: 16px;
+}
+
 /* ================= NAV ================= */
 .nav-link {
-  color: var(--text-fade) !important; /* override Bootstrap */
+  color: var(--text-fade) !important;
   font-size: 13px;
   letter-spacing: 1.5px;
   padding: 6px 0;
@@ -227,17 +234,7 @@ html {
   z-index: 9998;
 }
 
-/* ================= RESPONSIVE ================= */
-
-/* Tablet */
-@media (max-width: 992px) {
-  .sidebar {
-    position: relative;
-    margin-bottom: 30px;
-  }
-}
-
-/* Mobile */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
   .container-xl {
@@ -280,7 +277,7 @@ html {
     letter-spacing: 2px;
   }
 
-  /* Disable cursor */
+  /* Disable custom cursor */
   .cursor-dot,
   .cursor-outline {
     display: none;
