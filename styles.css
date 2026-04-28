@@ -67,9 +67,32 @@ p {
 }
 
 /* ================= SIDEBAR ================= */
-.sidebar {
+/* .sidebar {
   position: sticky;
   top: 0;
+} */
+/* DESKTOP FIXED SIDEBAR */
+@media (min-width: 992px) {
+  .sidebar {
+    position: fixed;
+    top: 80px; /* adjust based on your top spacing */
+    width: 320px; /* match your layout */
+  }
+
+  /* Push right content */
+  .col-lg-8 {
+    margin-left: 360px; /* sidebar width + gap */
+  }
+}
+@media (max-width: 991px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+  }
+
+  .col-lg-8 {
+    margin-left: 0;
+  }
 }
 
 .sidebar p {
