@@ -11,14 +11,14 @@
 
     <meta property="og:title" content="Rohit Kumar | Web Developer">
     <meta property="og:description" content="5+ years experience in PHP, WordPress, and MERN stack. Building scalable and SEO-friendly web applications.">
-    <meta property="og:image" content="https://avatars.githubusercontent.com/u/106913547?s=400&u=28ec935e40ede844904f8df946d9ea1c5d859f99&v=4">
+    <meta property="og:image" content="https://github.com/rohitkrdevs/rohitkrdevs.github.io/blob/main/rohit-kumar-ranchi-web-developer.jpg">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rohitkrdevs.github.io">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Rohit Kumar | Web Developer">
     <meta name="twitter:description" content="Experienced Web Developer specializing in PHP, WordPress & MERN stack.">
-    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/106913547?s=400&u=28ec935e40ede844904f8df946d9ea1c5d859f99&v=4">
+    <meta name="twitter:image" content="https://github.com/rohitkrdevs/rohitkrdevs.github.io/blob/main/rohit-kumar-ranchi-web-developer.jpg">
 
     <script type="application/ld+json">
         { "@context": "https://schema.org", "@type": "Person", "name": "Rohit Kumar", "jobTitle": "Web Developer", "url": "https://rohitkrdevs.github.io", "image": "https://avatars.githubusercontent.com/u/106913547?s=400", "sameAs": [ "https://github.com/rohitkrdevs",
@@ -192,6 +192,53 @@
         }
         
         /* TECH STACK */
+        /* SKILL BOX */
+.skill-box {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.08);
+  border-radius: 14px;
+  padding: 22px;
+  backdrop-filter: blur(8px);
+  height: 100%;
+}
+
+/* TITLE */
+.skill-box h5 {
+  font-size: 14px;
+  color: var(--accent);
+  margin-bottom: 14px;
+  letter-spacing: 0.6px;
+}
+
+/* TAG CONTAINER */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* TAGS */
+.skill-tags span {
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(94, 234, 212, 0.08);
+  border: 1px solid rgba(94, 234, 212, 0.25);
+  color: var(--accent);
+  letter-spacing: 0.3px;
+}
+
+/* MOBILE POLISH */
+@media (max-width: 768px) {
+  .skill-box {
+    padding: 18px;
+  }
+
+  .skill-tags span {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+}
         .tech-stack {
           margin-top: 12px;
         }
@@ -364,7 +411,7 @@
             <!-- LEFT SIDEBAR -->
             <div class="col-lg-4 sidebar col-wrapper">
                 <img 
-                  src="https://avatars.githubusercontent.com/u/106913547?s=400&u=28ec935e40ede844904f8df946d9ea1c5d859f99&v=4" 
+                  src="https://github.com/rohitkrdevs/rohitkrdevs.github.io/blob/main/rohit-kumar-ranchi-web-developer.jpg" 
                   alt="Rohit Kumar Web Developer Ranchi"
                   class="profile-img"
                 />
@@ -480,54 +527,83 @@
 
                 </section>
 
-                <section id="skills">
-                    <h3>Skills & Technologies</h3>
+                <section id="skills" class="section">
+  <h3>Skills & Technologies</h3>
 
-                    <div class="row g-4">
+  <div class="row g-4">
 
-                        <div class="col-md-6">
-                            <div class="card-custom skill-card">
-                                <h5>Core Technologies</h5>
-                                <p>HTML, CSS, JavaScript (Basic), PHP, MySQL</p>
-                            </div>
-                        </div>
+    <div class="col-md-6">
+      <div class="skill-box">
+        <h5>Core Technologies</h5>
+        <div class="skill-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>PHP</span>
+          <span>MySQL</span>
+        </div>
+      </div>
+    </div>
 
-                        <div class="col-md-6">
-                            <div class="card-custom skill-card">
-                                <h5>UI & Styling</h5>
-                                <p>Bootstrap, Tailwind CSS, Responsive Design</p>
-                            </div>
-                        </div>
+    <div class="col-md-6">
+      <div class="skill-box">
+        <h5>UI & Styling</h5>
+        <div class="skill-tags">
+          <span>Bootstrap</span>
+          <span>Tailwind</span>
+          <span>Responsive Design</span>
+        </div>
+      </div>
+    </div>
 
-                        <div class="col-md-6">
-                            <div class="card-custom skill-card">
-                                <h5>WordPress</h5>
-                                <p>Setup, theme customization, plugins, page builders</p>
-                            </div>
-                        </div>
+    <div class="col-md-6">
+      <div class="skill-box">
+        <h5>WordPress</h5>
+        <div class="skill-tags">
+          <span>Theme Customization</span>
+          <span>Plugins</span>
+          <span>Page Builders</span>
+        </div>
+      </div>
+    </div>
 
-                        <div class="col-md-6">
-                            <div class="card-custom skill-card">
-                                <h5>Hosting</h5>
-                                <p>cPanel, domains, database setup</p>
-                            </div>
-                        </div>
+    <div class="col-md-6">
+      <div class="skill-box">
+        <h5>Hosting</h5>
+        <div class="skill-tags">
+          <span>cPanel</span>
+          <span>Domains</span>
+          <span>Database Setup</span>
+        </div>
+      </div>
+    </div>
 
-                        <div class="col-md-6">
-                            <div class="card-custom skill-card">
-                                <h5>Features</h5>
-                                <p>Dashboards, admin panels, Razorpay & Stripe integration</p>
-                            </div>
-                        </div>
+    <div class="col-md-6">
+      <div class="skill-box">
+        <h5>Features</h5>
+        <div class="skill-tags">
+          <span>Dashboards</span>
+          <span>Admin Panels</span>
+          <span>Razorpay</span>
+          <span>Stripe</span>
+        </div>
+      </div>
+    </div>
 
-                        <div class="col-md-6">
-                            <div class="card-custom skill-card">
-                                <h5>Other</h5>
-                                <p>SEO basics, Ads, Debugging, Git/GitHub</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+    <div class="col-md-6">
+      <div class="skill-box">
+        <h5>Other</h5>
+        <div class="skill-tags">
+          <span>SEO</span>
+          <span>Ads</span>
+          <span>Debugging</span>
+          <span>Git/GitHub</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
             </div>
         </div>
     </div>
