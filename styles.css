@@ -21,17 +21,17 @@ html {
 body {
 	background:
 		radial-gradient(
-			circle at top left,
+			circle at bottom left,
 			rgba(94, 234, 212, 0.06),
 			transparent 28%
 		),
 		radial-gradient(
-			circle at bottom right,
+			circle at top right,
 			rgba(59, 130, 246, 0.05),
 			transparent 30%
 		),
-		linear-gradient(135deg, var(--bg-soft), var(--bg));
-
+		linear-gradient(180deg, var(--bg), var(--bg-soft));
+	
 	color: var(--text-main);
 
 	font-family: "Inter", sans-serif;
